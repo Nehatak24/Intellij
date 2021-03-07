@@ -51,7 +51,6 @@ public class NewTab
         driver.switchTo().window(browserTabs.get(1));
         String currentUrl= driver.getCurrentUrl();
         assert currentUrl.equals(Expected);
-
         driver.close();
         driver.switchTo().window(browserTabs.get(0));
       //  driver.close();

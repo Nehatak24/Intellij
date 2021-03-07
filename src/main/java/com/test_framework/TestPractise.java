@@ -7,6 +7,8 @@ import org.openqa.selenium.*;
 import org . openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +36,7 @@ public class TestPractise
     @FindBy(how = How.XPATH,using ="//span[@class='gel-long-primer'] ")
     private WebElement Town;
 
-    String Expected="https://www.bbc.co.uk/news/localnews/2639577-London/0";
+    String Expected="https://www.bbc.co.uk/news/localnews/2643743-london/0";
 
     public void ClickIplayer()
     {
@@ -60,10 +62,13 @@ public class TestPractise
     public void EnterLocation()
     {
         Utils.waitForSomeTime();
-        Location.sendKeys("London");
+        Location.sendKeys("Winnersh");
+       // WebDriverWait wait = new WebDriverWait(driver, 3000);
+      //  WebElement location = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@class='ls-c-search__input gel-pica']")));
+       // location.sendKeys("London");
         Utils.waitForSomeTime();
         Utils.waitForSomeTime();
-        Town.isDisplayed();
+        Town.click();
 
     }
 

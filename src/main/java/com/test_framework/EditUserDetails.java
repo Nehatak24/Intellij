@@ -76,7 +76,7 @@ public class EditUserDetails
     {
        String CurrentUrl =driver.getCurrentUrl();
        assert CurrentUrl.equals(Expected);
-        Utils.waitForSomeTime();
+       Utils.waitForSomeTime();
         EditButton.click();
         Utils.waitForSomeTime();
         TelephoneNumber.clear();

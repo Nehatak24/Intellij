@@ -28,8 +28,11 @@ public class Login
     private WebElement LoginButton;
     @FindBy(how = How.LINK_TEXT, using = "BBC Account")
     private WebElement BBCAccount;
+  //  @FindBy(how = How.LINK_TEXT, using = "Sign out")
+ //   private WebElement SignOut;
 
     String Expected = "BBC Account";
+
 
     public void navigateFunction()
     {
@@ -56,5 +59,6 @@ public class Login
      public void CheckLoginSuccessful()
      {
          assert BBCAccount.getText().equals(Expected);
+
      }
 }

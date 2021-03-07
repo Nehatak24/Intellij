@@ -16,7 +16,7 @@ public class Weather
     {
         this.driver = driver;
         PageFactory.initElements(driver,this );
-        ((JavascriptExecutor)driver).executeScript("scroll(0,500)");
+       // ((JavascriptExecutor)driver).executeScript("scroll(0,500)");
     }
     @FindBy(how = How.LINK_TEXT,using = "Weather")
     private WebElement WeatherLink;
@@ -24,6 +24,7 @@ public class Weather
     private WebElement WeatherPageLoad;
     @FindBy(how = How.LINK_TEXT,using = "Bitesize")
     private WebElement BiteSize;
+
     String Expected="https://www.bbc.co.uk/bitesize";
 
     public void ClickWeatherLink()
@@ -33,13 +34,16 @@ public class Weather
         ((JavascriptExecutor)driver).executeScript("scroll(0,6000)");
         Utils.waitForSomeTime();
         Utils.waitForSomeTime();
-        BiteSize.click();
+        //BiteSize.click();
     }
 
 
     public void CheckWeatherPage()
     {
         WeatherPageLoad.isDisplayed();
+        Utils.waitForSomeTime();
+        Utils.waitForSomeTime();
+        BiteSize.click();
         Utils.waitForSomeTime();
         Utils.waitForSomeTime();
         String CurrentUrl =driver.getCurrentUrl();
