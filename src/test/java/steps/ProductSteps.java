@@ -25,7 +25,7 @@ public class ProductSteps
     @When("^I click on Product$")
     public void iClickOnProduct()
     {
-        product.ClickMarket();
+        product.ClickProducts();
     }
 
     @And("^I Select Product$")
